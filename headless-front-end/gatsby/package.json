@@ -1,0 +1,59 @@
+{
+  "name": "my-craft-demo-headless-gatsby",
+  "private": true,
+  "description": "A simple starter to get up and developing quickly with Gatsby and Craft CMS",
+  "version": "1.0.0",
+  "author": "Jake Dohm <jake.dohm@me.com>",
+  "dependencies": {
+    "gatsby": "^2.25.4",
+    "gatsby-image": "^2.4.21",
+    "gatsby-plugin-manifest": "^2.5.2",
+    "gatsby-plugin-offline": "^2.2.7",
+    "gatsby-plugin-react-helmet": "^3.3.14",
+    "gatsby-plugin-sass": "^2.4.2",
+    "gatsby-plugin-sharp": "^2.7.1",
+    "gatsby-source-craft": "^1.0.0-beta.2",
+    "gatsby-source-filesystem": "^2.4.2",
+    "gatsby-transformer-sharp": "^2.5.17",
+    "nuka-carousel": "^4.7.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^5.2.1",
+    "snyk": "^1.425.4"
+  },
+  "devDependencies": {
+    "@babel/polyfill": "^7.10.4",
+    "core-js": "^3.7.0",
+    "node-sass": "^4.14.1",
+    "prettier": "^1.19.1",
+    "tailwindcss": "^1.6.2"
+  },
+  "keywords": [
+    "gatsby",
+    "craftcms",
+    "headless",
+    "tailwind",
+    "react"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf .cache",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "snyk": true
+}

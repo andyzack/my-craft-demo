@@ -1,0 +1,110 @@
+{#
+  This is master layout for other templates to extend
+#}
+<!DOCTYPE html>
+{#
+  The language code for the language you chose when you installed Craft
+ #}
+<html lang="{{ craft.app.language }}">
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8"/>
+    {#
+      `siteName` is a global variable set in the Control Panel (Settings → Sites)
+    #}
+    <title>{{ siteName }}</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport">
+    <meta content="origin-when-cross-origin" name="referrer">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    {#
+      The Asset Rev plugin provides this `rev()` Twig function for cache-busting
+      css and js files. It will return nothing when the webpack dev server is
+      running because styles are then injected via js.
+    #}
+    {% set stylesheet = rev('main.css') %}
+    {% if stylesheet %}
+      <link rel="stylesheet" href="{{ rev('main.css') }}">
+    {% endif %}
+
+  </head>
+  <body class="ltr">
+    <header class="c-header">
+      <nav class="container bg-gray-800 py-10 text-base md:text-xl font-inter" role="navigation" aria-label="Main">
+        {#
+          We grab the first URL segment as a way to identify whether or not a
+          main navigation link should be active.
+        #}
+        {% set firstSegment = craft.app.request.getSegment(1) %}
+  
+        <ul class="flex items-center justify-center w-full mx-auto">
+          <li class="w-1/2">
+            <ul class="flex items-center justify-start">
+              <li class="mr-6">
+                <a class="text-orange-200 border-b border-gray-800 transition duration-500 ease-in-out {{ firstSegment == '' ? 'hover:border-b hover:border-orange-200' }}" href="{{ url('#activities') }}">Activities</a>
+              </li>
+              <li class="mr-6">
+                <a class="text-orange-200 border-b border-gray-800 transition duration-500 ease-in-out {{ firstSegment == '' ? 'hover:border-b hover:border-orange-200' }}" href="{{ url('#places') }}">Places</a>
+              </li>
+              <li class="mr-6">
+                <a class="text-orange-200 border-b border-gray-800 transition duration-500 ease-in-out {{ firstSegment == '' ? 'hover:border-b hover:border-orange-200' }}" href="{{ url('#packages') }}">Packages</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="text-orange-200" href="{{ siteUrl }}">
+              <span class="sr-only">Blockout</span>
+              {{ svg('@webroot/uploads/branchout-logo.svg')|attr({ class: 'c-header__logo h-8 w-auto md:h-20 text-gray-900' }) }}
+            </a>
+          </li>
+          <li class="w-1/2">
+            <ul class="flex items-center justify-end">
+              <li class="ml-6">
+                <a class="text-orange-200 border-b border-gray-800 transition duration-500 ease-in-out {{ firstSegment == '' ? 'hover:border-b hover:border-orange-200' }}" href="{{ url('#about') }}">About Us</a>
+              </li>
+              <li class="ml-6">
+                <a class="text-orange-200 border-b border-gray-800 transition duration-500 ease-in-out {{ firstSegment == '' ? 'hover:border-b hover:border-orange-200' }}" href="{{ url('#faq') }}">FAQ</a>
+              </li>
+              <li class="ml-6">
+                <a class="text-orange-200 border-b border-gray-800 transition duration-500 ease-in-out {{ firstSegment == '' ? 'hover:border-b hover:border-orange-200' }}" href="{{ url('#blog') }}">Blog</a>
+              </li>
+              <li class="ml-6">
+                <a class="text-orange-200 border-b border-gray-800 transition duration-500 ease-in-out {{ firstSegment == '' ? 'hover:border-b hover:border-orange-200' }}" href="{{ url('#contact') }}">Contact</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      {% block content %}
+        This content is replaced by the content block in the template
+        that extends this layout file.
+      {% endblock %}
+    </div>
+
+    <footer class="c-footer">
+      <div class="container">
+        <div class="h-10 bg-cover bg-top" style="background-image: url({{ dataUrl('@webroot/uploads/branchout-jaggeddivider.svg') }});"></div>
+        <div class="text-orange-200 bg-black uppercase font-sourcecode py-8">
+          &copy; {{ now | date('Y') }} Block Out. Website by <a href="http://www.spicyweb.com.au/" class="text-orange-200 border-b border-gray-800 transition duration-500 ease-in-out {{ firstSegment == '' ? 'hover:border-b hover:border-orange-200' }}" target="_blank">Spicy Web</a>
+        </div>
+      </div>
+    </footer>
+
+    {#
+      As in the <head> section above, the Asset Rev plugin provides the `rev()`
+      function to cache-bust the js file. Unlike the CSS <link> tag in the <head>,
+      this works just fine with the webpack dev server. See the `/config/assetrev.php`
+      file to see how it is configured.
+    #}
+    <script src="{{ rev('main.js') }}"></script>
+  </body>
+</html>

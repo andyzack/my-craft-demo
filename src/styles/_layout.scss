@@ -1,0 +1,11 @@
+.c-header {
+  &__logo {
+    path {
+      fill: #f7f1e3 !important;
+    }
+  }
+}
+
+.c-footer {
+  @apply .text-sm .m-auto .text-center;
+}

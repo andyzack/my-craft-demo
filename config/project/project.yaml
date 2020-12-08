@@ -1,0 +1,44 @@
+dateModified: 1607387115
+email:
+  fromEmail: sam@craftcms.com
+  fromName: 'Craft Blog'
+  transportType: craft\mail\transportadapters\Sendmail
+plugins:
+  assetrev:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  gatsby-helper:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
+    settings:
+      previewServerUrl: ''
+      webhookTarget: $GATSBY_PREVIEW_TARGET
+  oembed:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
+    settings:
+      enableCache: '1'
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  typogrify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: pro
+  live: true
+  name: 'My Craft Demo'
+  retryDuration: null
+  schemaVersion: 3.5.13
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: ''
+  photoVolumeUid: null
+  requireEmailVerification: true

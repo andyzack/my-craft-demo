@@ -1,0 +1,29 @@
+{#
+  Renders the Body Content field's Image Carousel block
+#}
+{% import "_private/macros/images" as images %}
+
+{% set assets = block.images.all() %}
+{% set carouselId = 'swiper-' ~ block.id %}
+
+  <!-- Slider main container -->
+  <!-- Swiper -->
+  <div class="swiper-container {{ carouselId }}">
+    <div class="swiper-wrapper">
+      {% for asset in assets %}
+        <h2 class="text-2xl text-black font-display my-4">{{ asset.imagesTitle }}</h2>
+        <div class="swiper-slide" data-hash="{{ 'slide' ~ loop.index }}">
+          <figure class="item {% if loop.first %}active{% endif %}">
+            {{ images.img(asset, [350, 700, 1400], 16/9) }}
+            {% if asset.caption %}
+              <figcaption class="carousel-caption">
+                {{ asset.caption }}
+              </figcaption>
+            {% endif %}
+          </figure>
+        </div>
+      {% endfor %}
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
