@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: 911477c7-3c92-407b-a9a9-e69ccb74eabb
+handle: introduction
+instructions: 'Short text on top of section'
+name: Introduction
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

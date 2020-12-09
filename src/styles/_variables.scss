@@ -1,1 +1,20 @@
 $content-width: 42rem;
+
+$gray-800: #33302d;
+$orange-100: #f7f1e2;
+$orange-200: #e1dad0;
+$orange-600: #d9664c;
+$orange-700: #af5243;
+
+/* CUSTOM CLASSES */
+.-right-1 {
+  right: -7%
+}
+
+.-top-1 {
+  top: -7%
+}
+
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0,0,0,0.10);
+}

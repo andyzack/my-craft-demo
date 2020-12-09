@@ -1,5 +1,5 @@
 fieldLayouts:
-  434b8bff-3f8f-4c04-b4e1-43001b019d73:
+  6e08a29d-0e72-41b4-aac3-6b49a25d15eb:
     tabs:
       -
         elements:
@@ -10,8 +10,8 @@ fieldLayouts:
             class: null
             disabled: false
             id: null
-            instructions: null
-            label: ''
+            instructions: ''
+            label: 'Activity Name'
             max: null
             min: null
             name: null
@@ -27,7 +27,16 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 031e8547-9981-4367-ad27-178240517ea1
+            fieldUid: baf92585-f5fa-4c8f-b0c1-bdf44702738a
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 967c78dc-e17a-4909-a832-9f5151b2332c
             instructions: null
             label: null
             required: false
@@ -44,13 +53,22 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-        name: Content
+          -
+            fieldUid: f1609569-63ed-461e-a6dd-ef9bd55265cd
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Activity Details'
         sortOrder: 1
-handle: home
-hasTitleField: false
-name: Home
-section: 4593234a-cdd0-4c54-9931-4eb606b9e7f5
+handle: activities
+hasTitleField: true
+name: Activities
+section: 0d7d6141-cec6-4acc-9665-0f722f1518f5
 sortOrder: 1
-titleFormat: '{section.name|raw}'
+titleFormat: null
 titleTranslationKeyFormat: null
-titleTranslationMethod: ''
+titleTranslationMethod: site
