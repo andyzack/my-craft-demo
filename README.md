@@ -33,7 +33,7 @@ npm run build
 Create a new web server to host your Craft project and point to `web/` directory
 
 ### Import Database
-Attached copy of MySQL db in the email
+Extract copy of MySQL db (my_craft_demo_2020-12-10.sql.zip available in the root folder) and upload in your project
 
 ### Web Browser Setup
 http://my-craft-demo.test/admin
