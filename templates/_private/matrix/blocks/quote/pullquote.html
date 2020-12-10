@@ -1,7 +1,7 @@
 {#
   Renders the Body Content field's Quote block when the "Pullquote" style is selected.
 #}
-<blockquote class="m-8 italic text-2xl text-bold text-center font-serif rich-text text-gray-800">
+<blockquote class="m-8 italic text-2xl text-bold text-center font-serif rich-text text-orange-100">
 
   {{ block.quote | typogrify }}
 
@@ -10,7 +10,7 @@
     case someone accidentally entered only spaces to the field.
   #}
   {% if block.attribution | trim | length %}
-    <footer class="text-gray-600 font-sans not-italic text-base">
+    <footer class="text-orange-100 font-sans not-italic text-base">
       &mdash; {{ block.attribution | typogrify }}
     </footer>
   {% endif %}

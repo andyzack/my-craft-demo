@@ -1,0 +1,228 @@
+field: 5078004c-4379-4cfc-8931-f386cbe3dbbc
+fieldLayouts:
+  39a13f9e-7e80-42aa-8e46-bf24fca50aed:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: cbf2ec30-a090-4597-8978-83fec9be0363
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 50d7c69d-2fa8-428c-b8be-c9727158fe13
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 4b552e7e-8127-494a-89a3-579eeaadcd70
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: d29ea691-1c48-450b-b491-ebe48ca11f64
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: b1858648-d1e3-4189-9f41-9d1f6ce73132
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  4b552e7e-8127-494a-89a3-579eeaadcd70:
+    contentColumnType: text
+    fieldGroup: null
+    handle: listingTitle
+    instructions: 'Enter Title'
+    name: 'Listing Title'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  50d7c69d-2fa8-428c-b8be-c9727158fe13:
+    contentColumnType: string
+    fieldGroup: null
+    handle: aspectRatio
+    instructions: ''
+    name: 'Aspect Ratio'
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - '16:9'
+            -
+              - value
+              - '169'
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - '4:3'
+            -
+              - value
+              - '43'
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '3:2'
+            -
+              - value
+              - '32'
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '2:5'
+            -
+              - value
+              - '25'
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  b1858648-d1e3-4189-9f41-9d1f6ce73132:
+    contentColumnType: string
+    fieldGroup: null
+    handle: listingImage
+    instructions: 'Double-click the image thumbnail to apply a caption to an image.'
+    name: 'Listing Image'
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:101a70a1-d200-4629-91e5-3425a0937c0e'
+      defaultUploadLocationSubpath: ''
+      limit: ''
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: 'Add an image'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+      singleUploadLocationSource: 'volume:101a70a1-d200-4629-91e5-3425a0937c0e'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  cbf2ec30-a090-4597-8978-83fec9be0363:
+    contentColumnType: string
+    fieldGroup: null
+    handle: images
+    instructions: 'Double-click an image thumbnail to apply a caption to an image.'
+    name: images
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - html
+        - image
+      defaultUploadLocationSource: 'volume:101a70a1-d200-4629-91e5-3425a0937c0e'
+      defaultUploadLocationSubpath: ''
+      limit: ''
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: 'Add an icon'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+      singleUploadLocationSource: 'volume:101a70a1-d200-4629-91e5-3425a0937c0e'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  d29ea691-1c48-450b-b491-ebe48ca11f64:
+    contentColumnType: text
+    fieldGroup: null
+    handle: listingCopy
+    instructions: 'Enter Copy'
+    name: 'Listing Copy'
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: ''
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+handle: listing
+name: Listing
+sortOrder: 1

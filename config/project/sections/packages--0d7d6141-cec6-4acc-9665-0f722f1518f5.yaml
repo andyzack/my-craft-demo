@@ -1,6 +1,6 @@
 enableVersioning: true
-handle: activities
-name: Activities
+handle: packages
+name: Packages
 previewTargets:
   -
     __assoc__:
@@ -18,6 +18,6 @@ siteSettings:
   f3400d6f-0f33-4cef-9521-f8f6620399ec:
     enabledByDefault: true
     hasUrls: true
-    template: _private/activities
-    uriFormat: 'activities/{slug}'
+    template: _private/packages
+    uriFormat: 'packages/{slug}'
 type: channel

@@ -11,7 +11,7 @@ fieldLayouts:
             disabled: false
             id: null
             instructions: ''
-            label: 'Activity Name'
+            label: 'Package Name'
             max: null
             min: null
             name: null
@@ -28,45 +28,45 @@ fieldLayouts:
             width: 100
           -
             fieldUid: baf92585-f5fa-4c8f-b0c1-bdf44702738a
-            instructions: null
-            label: null
-            required: false
+            instructions: ''
+            label: 'Package Intro'
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
           -
             fieldUid: 967c78dc-e17a-4909-a832-9f5151b2332c
-            instructions: null
-            label: null
-            required: false
+            instructions: ''
+            label: 'Packages Copy'
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
           -
             fieldUid: e567b6ab-3855-452b-a337-4c119dac4d62
-            instructions: null
-            label: null
-            required: false
+            instructions: ''
+            label: 'Package Content'
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
           -
             fieldUid: f1609569-63ed-461e-a6dd-ef9bd55265cd
-            instructions: null
-            label: null
-            required: false
+            instructions: ''
+            label: 'Package Image'
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-        name: 'Activity Details'
+        name: 'Package Details'
         sortOrder: 1
-handle: activities
+handle: packages
 hasTitleField: true
-name: Activities
+name: Packages
 section: 0d7d6141-cec6-4acc-9665-0f722f1518f5
 sortOrder: 1
 titleFormat: null

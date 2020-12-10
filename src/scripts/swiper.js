@@ -15,10 +15,34 @@ var cardCarousel = new Swiper('.c-card-carousel', {
   }
 });
 
-var heroSwiper = new Swiper('.hero-container', {
-  spaceBetween: 30,
+var heroSwiper = new Swiper('.c-hero-carousel', {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  // init: false,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 0,
+    }
+  }
+});
+
+var listingSwiper = new Swiper('.c-listing-carousel', {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  // init: false,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 5,
+      spaceBetween: 0,
+    }
   }
 });

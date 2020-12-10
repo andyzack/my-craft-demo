@@ -1,0 +1,148 @@
+field: 5b3791ab-899f-4db6-b8d9-912a0aa18d87
+fieldLayouts:
+  23a9ec3b-ec1c-4293-b023-67ae43be1cf8:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 3d69ecc2-ebfc-4738-bf23-e680f804b116
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: f3ade68f-0542-4f6c-afbf-1a7a9d628b75
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 1c4ccbe2-32ed-4ebb-94ab-1723b6ed2dc2
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  1c4ccbe2-32ed-4ebb-94ab-1723b6ed2dc2:
+    contentColumnType: text
+    fieldGroup: null
+    handle: imagesTitle
+    instructions: 'Enter Title'
+    name: Title
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  3d69ecc2-ebfc-4738-bf23-e680f804b116:
+    contentColumnType: string
+    fieldGroup: null
+    handle: images
+    instructions: 'Double-click an image thumbnail to apply a caption to an image.'
+    name: images
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:101a70a1-d200-4629-91e5-3425a0937c0e'
+      defaultUploadLocationSubpath: ''
+      limit: ''
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: 'Add an image'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+      singleUploadLocationSource: 'volume:101a70a1-d200-4629-91e5-3425a0937c0e'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  f3ade68f-0542-4f6c-afbf-1a7a9d628b75:
+    contentColumnType: string
+    fieldGroup: null
+    handle: aspectRatio
+    instructions: ''
+    name: 'Aspect Ratio'
+    searchable: true
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - '16:9'
+            -
+              - value
+              - '169'
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '4:3'
+            -
+              - value
+              - '43'
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '3:2'
+            -
+              - value
+              - '32'
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '2:5'
+            -
+              - value
+              - '13'
+            -
+              - default
+              - '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+handle: hero
+name: Hero
+sortOrder: 1

@@ -95,7 +95,7 @@ fields:
       allowedKinds:
         - image
       defaultUploadLocationSource: 'volume:101a70a1-d200-4629-91e5-3425a0937c0e'
-      defaultUploadLocationSubpath: images
+      defaultUploadLocationSubpath: ''
       limit: '1'
       localizeRelations: false
       previewMode: full

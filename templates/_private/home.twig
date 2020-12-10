@@ -1,0 +1,27 @@
+{% extends "_private/layout" %}
+
+{% block content %}
+
+  {# --- HERO BANNER --- #}
+  <div class="c-hero bg-gray-800">
+      <div class="bg-gray-800">
+        {% include "_private/matrix" with {blocks: entry.hero.all()} %}
+      </div>
+  </div>
+
+  {# --- PLACES --- #}
+  <div class="c-places bg-orange-100">
+      {% include "_private/matrix" with {blocks: entry.listing.all()} %}
+  </div>
+
+  {# --- PACKAGES --- #}
+  <div class="c-packages bg-orange-100">
+      {% include "_private/matrix" with {blocks: entry.cards.all()} %}
+  </div>
+
+  {# --- ACTIVITIES --- #}
+  <div class="c-activities bg-orange-100 relative overflow-hidden">
+      {% include "_private/matrix" with {blocks: entry.centredContent.all()} %}
+  </div>
+
+{% endblock %}

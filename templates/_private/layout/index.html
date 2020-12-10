@@ -34,54 +34,14 @@
     {% endif %}
 
   </head>
-  <body class="ltr">
-    <header class="c-header absolute left-0 right-0 z-10">
-      <nav class="container py-10 text-base md:text-xl font-inter" role="navigation" aria-label="Main">
-        {#
-          We grab the first URL segment as a way to identify whether or not a
-          main navigation link should be active.
-        #}
-        {% set firstSegment = craft.app.request.getSegment(1) %}
-  
-        <ul class="flex items-center justify-center w-full mx-auto">
-          <li class="w-1/2">
-            <ul class="items-center justify-start hidden md:flex">
-              <li class="mr-6">
-                <a class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#activities') }}">Activities</a>
-              </li>
-              <li class="mr-6">
-                <a class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#places') }}">Places</a>
-              </li>
-              <li class="mr-6">
-                <a class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#packages') }}">Packages</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a class="text-orange-100" href="{{ siteUrl }}">
-              <span class="sr-only">Blockout</span>
-              {{ svg('@webroot/uploads/branchout-logo.svg')|attr({ class: 'c-header__logo h-12 w-auto md:h-20 text-gray-900' }) }}
-            </a>
-          </li>
-          <li class="w-1/2">
-            <ul class="items-center justify-end hidden md:flex">
-              <li class="ml-6">
-                <a class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#about') }}">About Us</a>
-              </li>
-              <li class="ml-6">
-                <a class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#faq') }}">FAQ</a>
-              </li>
-              <li class="ml-6">
-                <a class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#blog') }}">Blog</a>
-              </li>
-              <li class="ml-6">
-                <a class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#contact') }}">Contact</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </header>
+  <body class="bg-gray-800">
+    {#
+      We grab the first URL segment as a way to identify whether or not a
+      main navigation link should be active.
+    #}
+    {% set firstSegment = craft.app.request.getSegment(1) %}
+    
+    {% include '_private/layout/header' %}
 
     <div class="container">
       {% block content %}
@@ -90,48 +50,7 @@
       {% endblock %}
     </div>
 
-    <footer class="c-footer">
-      <div class="container bg-cover bg-top pt-20 md:pt-32 bg-orange-100" style="background-image: url({{ dataUrl('@webroot/uploads/branchout-jaggeddivider.svg') }});">
-
-        <ul class="flex items-center justify-center w-full mx-auto leading-relaxed">
-          <li class="w-1/2">
-            <ul class="items-start justify-start hidden md:flex flex-col text-left">
-              <li class="mr-6">
-                <a class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 text-left text-base {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#Contact') }}">Contact Us</a>
-              </li>
-              <li class="mr-6">
-                <a class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 text-left text-base {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#Instagram') }}">Instagram</a>
-                <a class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 text-left text-base {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#Facebook') }}">Facebook</a>
-              </li>
-              <li class="mr-6">
-                <a class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 text-left text-base {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="mailto: andyzack@gmail.com">Email Us</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a class="text-orange-100" href="{{ siteUrl }}">
-              <span class="sr-only">Blockout</span>
-              {{ svg('@webroot/uploads/branchout-logo.svg')|attr({ class: 'c-header__logo h-8 w-auto md:h-20 text-gray-900' }) }}
-            </a>
-          </li>
-          <li class="w-1/2">
-            <ul class="items-end justify-end hidden md:flex">
-              <li class="ml-6">
-                <p class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 text-right  text-base">
-                  Level 1, 387 Clarendon Street <br>
-                  South Australia <br>
-                  VIC, 3205 AUS <br>
-                </p>
-              </li>
-            </ul>
-          </li>
-        </ul>
-
-        <div class="text-orange-100 bg-black uppercase font-sourcecode py-12 text-xs">
-          &copy; {{ now | date('Y') }} Branch Out. Website by <a href="http://www.spicyweb.com.au/" class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" target="_blank">Spicy Web</a>
-        </div>
-      </div>
-    </footer>
+    {% include '_private/layout/footer' %}
 
     {#
       As in the <head> section above, the Asset Rev plugin provides the `rev()`

@@ -1,7 +1,7 @@
 {#
   Renders the Body Content field's Quote block when the "Blockquote" style is selected.
 #}
-<blockquote class="text-lg text-bold border-l border-gray-700 pl-4 py-2 rich-text text-gray-700 flex flex-col">
+<blockquote class="text-lg text-bold border-l border-gray-700 pl-4 py-2 rich-text text-orange-300 flex flex-col">
 
   {{ block.quote | typogrify }}
 
@@ -10,7 +10,7 @@
     case someone accidentally entered only spaces to the field.
   #}
   {% if block.attribution | trim | length %}
-    <footer class="text-gray-600 font-sans text-base">
+    <footer class="text-orange-300 font-sans text-base">
       &mdash; {{ block.attribution | typogrify  }}
     </footer>
   {% endif %}

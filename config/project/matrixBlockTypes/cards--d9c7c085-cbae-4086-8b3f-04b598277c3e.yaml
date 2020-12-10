@@ -1,0 +1,204 @@
+field: 2f2878ed-1f33-4e42-a96d-66215377c511
+fieldLayouts:
+  e12e54fd-ab49-4e27-b342-ce149c61d1c3:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 51c7d4c0-45da-4471-bdce-4a8e18dc2e96
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 3a5512ac-b907-450c-badc-45ad3c3b901e
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 62a1a784-5e65-4837-94bf-a4738d632822
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 0041e888-c18e-4ebb-ac05-be517a26ed9e
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: b0249c07-1a4f-4d4f-b948-73106f7ebb2e
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  0041e888-c18e-4ebb-ac05-be517a26ed9e:
+    contentColumnType: string
+    fieldGroup: null
+    handle: aspectRatio
+    instructions: ''
+    name: 'Aspect Ratio'
+    searchable: true
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - '16:9'
+            -
+              - value
+              - '169'
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '4:3'
+            -
+              - value
+              - '43'
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '3:2'
+            -
+              - value
+              - '32'
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '2:3'
+            -
+              - value
+              - '23'
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  3a5512ac-b907-450c-badc-45ad3c3b901e:
+    contentColumnType: text
+    fieldGroup: null
+    handle: cardsSection
+    instructions: ''
+    name: 'Cards Section'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  51c7d4c0-45da-4471-bdce-4a8e18dc2e96:
+    contentColumnType: text
+    fieldGroup: null
+    handle: cardsTitle
+    instructions: ''
+    name: 'Cards Title'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  62a1a784-5e65-4837-94bf-a4738d632822:
+    contentColumnType: string
+    fieldGroup: null
+    handle: images
+    instructions: 'Double-click an image thumbnail to apply a caption to an image.'
+    name: Images
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:101a70a1-d200-4629-91e5-3425a0937c0e'
+      defaultUploadLocationSubpath: ''
+      limit: ''
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: 'Add an image'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+      singleUploadLocationSource: 'volume:101a70a1-d200-4629-91e5-3425a0937c0e'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  b0249c07-1a4f-4d4f-b948-73106f7ebb2e:
+    contentColumnType: text
+    fieldGroup: null
+    handle: buttonLabel
+    instructions: ''
+    name: 'Button Label'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: cards
+name: Cards
+sortOrder: 1

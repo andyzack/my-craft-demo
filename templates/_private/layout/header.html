@@ -1,0 +1,45 @@
+{#
+  This is common header component used throughout the site, included in the master layout/index.html
+#}
+
+<header class="c-header absolute left-0 right-0 z-10">
+  <nav class="container py-10 text-base md:text-xl font-inter" role="navigation" aria-label="Main">
+    <ul class="flex items-center justify-center w-full mx-auto px-10">
+      <li class="w-1/2">
+        <ul class="items-center justify-start hidden lg:flex">
+          <li class="mr-6">
+            <a class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#activities') }}">Activities</a>
+          </li>
+          <li class="mr-6">
+            <a class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#places') }}">Places</a>
+          </li>
+          <li class="mr-6">
+            <a class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#packages') }}">Packages</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a class="text-orange-100" href="{{ siteUrl }}">
+          <span class="sr-only">Blockout</span>
+          {{ svg('@webroot/uploads/branchout-logo.svg')|attr({ class: 'c-header__logo h-12 w-auto md:h-20 text-gray-900' }) }}
+        </a>
+      </li>
+      <li class="w-1/2">
+        <ul class="items-center justify-end hidden lg:flex">
+          <li class="ml-6">
+            <a class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#about') }}">About Us</a>
+          </li>
+          <li class="ml-6">
+            <a class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#faq') }}">FAQ</a>
+          </li>
+          <li class="ml-6">
+            <a class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#blog') }}">Blog</a>
+          </li>
+          <li class="ml-6">
+            <a class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#contact') }}">Contact</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
