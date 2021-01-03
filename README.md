@@ -49,7 +49,6 @@ Note: Checkout sample MySQL db (my_craft_demo_2021-01-03.sql.zip) is available i
 
 ### Restart your app
 
-Experienced developers who are ready to work with a terminal, Git and Composer will benefit most from our advanced workflows. This is where our 💜s are.
 
 ## Front End Dependencies
 - `Node`
