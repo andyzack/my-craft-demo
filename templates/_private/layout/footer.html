@@ -3,33 +3,33 @@
 #}
 
 <footer class="c-footer">
-  <div class="container">
-    <div class="bg-orange-100 bg-cover bg-top pt-20 md:pt-32 px-10" style="background-image: url({{ dataUrl('@webroot/uploads/branchout-jaggeddivider.svg') }});">
-      <ul class="flex items-center justify-center w-full mx-auto leading-relaxed">
-        <li class="w-1/2">
-          <ul class="items-start justify-start hidden md:flex flex-col text-left">
-            <li class="mr-6">
+  <div class="container-branchout">
+    <div class="bg-orange-100 bg-cover bg-top pt-20 md:pt-32 px-10 md:-mt-20 mt-0" style="background-image: url({{ dataUrl('@webroot/uploads/branchout-jaggeddivider.svg') }});">
+      <ul class="flex flex-col md:flex-row items-center justify-center w-full mx-auto leading-relaxed">
+        <li class="md:w-1/2">
+          <ul class="items-start justify-start md:flex flex-col text-center md:text-left  pt-10 mt:pt-0">
+            <li class="md:mr-6">
               <a class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 text-left text-base {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#Contact') }}">Contact Us</a>
             </li>
-            <li class="mr-6">
+            <li class="md:mr-6">
               <a class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 text-left text-base {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#Instagram') }}">Instagram</a>
               <a class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 text-left text-base {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#Facebook') }}">Facebook</a>
             </li>
-            <li class="mr-6">
+            <li class="md:mr-6">
               <a class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 text-left text-base {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="mailto: andyzack@gmail.com">Email Us</a>
             </li>
           </ul>
         </li>
-        <li>
+        <li class="order-first md:order-none">
           <a class="text-orange-100" href="{{ siteUrl }}">
             <span class="sr-only">Blockout</span>
-            {{ svg('@webroot/uploads/branchout-logo.svg')|attr({ class: 'c-header__logo h-8 w-auto md:h-20 text-gray-900' }) }}
+            {{ svg('@webroot/uploads/branchout-logo.svg')|attr({ class: 'c-header__logo w-auto h-20 text-gray-900' }) }}
           </a>
         </li>
-        <li class="w-1/2">
-          <ul class="items-end justify-end hidden md:flex">
-            <li class="ml-6">
-              <p class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 text-right  text-base">
+        <li class="md:w-1/2">
+          <ul class="items-end justify-end md:flex pt-10 mt:pt-0">
+            <li class="md:ml-6">
+              <p class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 text-center md:text-right text-base">
                 Level 1, 387 Clarendon Street <br>
                 South Australia <br>
                 VIC, 3205 AUS <br>

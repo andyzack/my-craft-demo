@@ -4,6 +4,23 @@ import Swiper from 'swiper/bundle';
 // import Swiper styles
 import 'swiper/swiper-bundle.css';
 
+import Blazy from 'blazy';
+
+// Initialize
+var bLazy = new Blazy({ 
+  success: function(ele){
+      // Image has loaded
+  }
+, error: function(ele, msg){
+      if(msg === 'missing'){
+          // Data-src is missing
+      }
+      else if(msg === 'invalid'){
+          // Data-src is invalid
+      }  
+  }
+});
+
 /**
  * Swiper carousel from https://swiperjs.com/get-started/
  */
@@ -32,7 +49,7 @@ var heroSwiper = new Swiper('.c-hero-carousel', {
 });
 
 var listingSwiper = new Swiper('.c-listing-carousel', {
-  slidesPerView: 1,
+  slidesPerView: 3,
   spaceBetween: 0,
   // init: false,
   pagination: {
@@ -45,4 +62,16 @@ var listingSwiper = new Swiper('.c-listing-carousel', {
       spaceBetween: 0,
     }
   }
+});
+
+heroSwiper.on('slideChange', () => {
+  bLazy.revalidate();
+});
+
+listingSwiper.on('slideChange', () => {
+  bLazy.revalidate();
+});
+
+cardCarousel.on('slideChange', () => {
+  bLazy.revalidate();
 });

@@ -11,21 +11,38 @@
   align-items: center;
 }
 
-@mixin swiper-pagination {
+.c-hero-carousel .b-lazy.b-loaded {
+  opacity: .75;
+  &:hover {
+      opacity: .25;
+  }
+}
+
+@mixin swiper-pagination($bullet-color-normal: $orange-100, $bullet-color-active: $orange-600, $bullet-align: center) {
   .swiper-pagination {    
+    text-align: $bullet-align;
+
     &-bullet {
-      background: $orange-100;
+      background: $bullet-color-normal;
       height: 12px;
       width: 12px;
       opacity: 1;
       
       &-active {
-        background: $orange-600;
+        background: $bullet-color-active;
       }
     }
   }
 }
 
-.container {
+.c-card-carousel {
+  @include swiper-pagination($bullet-align: left);
+}
+
+.c-listing-carousel {
+  @include swiper-pagination($gray-800, $orange-600);
+}
+
+.c-hero-carousel {
   @include swiper-pagination;
 }

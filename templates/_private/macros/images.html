@@ -19,7 +19,7 @@
   {% set src = srcs[0] | split(' ') | first %}
   {% set alt = asset.imageAlt is defined ? asset.imageAlt %}
 
-  <img src="{{ src }}" sizes="100vw" srcset="{{ srcs | join(', ') }}" alt="{{ alt }}">
+  <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ src }}" sizes="100vw" srcset="{{ srcs | join(', ') }}" alt="{{ alt }}">
 
 {% endspaceless %}
 {% endmacro %}

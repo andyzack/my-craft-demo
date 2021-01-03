@@ -21,3 +21,6 @@
 @import 'quote';
 @import 'typography';
 @import '_plugins/swiper-carousel';
+
+/* These styles will not be purged */
+.swiper-pagination-bullet { /* ... */ }

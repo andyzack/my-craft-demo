@@ -6,34 +6,34 @@
 {% set assets = block.images.all() %}
 {% set carouselId = 'swiper-' ~ block.id %}
 
-<div class="p-6 lg:px-12 xl:p-20">
-  <div class="grid grid-cols-1 sm:grid-cols-2">
-    <div class="px-6 lg:px-16 py-6 lg:py-32">
+<div class="p-6 lg:px-12 xl:p-20 overflow-hidden">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:pb-20">
+    <div class="px-6 lg:px-16 py-6 lg:py-32 pb-24 md:pb-0">
       <h2 class="font-staatliches text-5xl text-orange-600 leading-none uppercase pb-6">{{ block.listingTitle }}</h2>
       {{ block.listingCopy }}
     </div>
-    <div class="flex justify-center items-center pr-6 lg:pr-16">
+    <div class="flex justify-center items-center pr-6 lg:pr-16 mx-12 md:mx-0">
       <span class="relative">
         {{ svg('@webroot/uploads/branchout-badge.svg')|attr({ class: 'c-listing__badge w-1/3 text-gray-800 pb-6 absolute -right-2 -top-2 z-10', style: 'fill: #33302d' }) }}
-        <img src="{{ block.listingImage.one().url() }}" alt="Connecting people and places" class="object-contain absolute right-1 bottom-1">
-        <img src="/uploads/MG_7359.jpg" alt="Beating heart of Australia's Red Centre" class="object-contain">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/uploads/MG_7359.jpg" alt="Beating heart of Australia's Red Centre" class="b-lazy object-contain">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ block.listingImage.one().url() }}" alt="Connecting people and places" class="b-lazy object-contain absolute right-1 bottom-1">
       </span>
     </div>
   </div>
   {# Slider main container #}
   <!-- Swiper -->
-  <div class="swiper-container c-listing-carousel {{ carouselId }}">
+  <div class="swiper-container c-listing-carousel {{ carouselId }} mt-10 md:m-0">
     <div class="swiper-wrapper">
       {% for asset in assets %}
         <div class="swiper-slide" data-hash="{{ 'slide' ~ loop.index }}">
           <a href="{{ asset.url }}" class="font-staatliches text-xl md:text-2xl text-orange-600 uppercase text-center px-8 py-4 leading-none flex items-center justify-center flex-col">
-            {{ images.img(asset, [350, 700, 1400], 1)|attr({ class: 'h-16 w-auto md:h-20 text-gray-900 pb-6' }) }}
+            {{ images.img(asset, [350, 700, 1400], 1)|attr({ class: 'h-24 w-auto md:h-20 text-gray-900 pb-6' }) }}
             <span class="pb-6">{{ asset.caption }}</span>
           </a>
         </div>
       {% endfor %}
     </div>
     <!-- Add Pagination -->
-    <div class="swiper-pagination text-center pb-8 px-20 md:hidden"></div>
+    <div class="swiper-pagination text-center pt-8 pb-0 md:pb-8 px-20 md:hidden"></div>
   </div>
 </div>

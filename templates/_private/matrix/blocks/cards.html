@@ -27,7 +27,8 @@
               <a class="inline-block text-orange-100 bg-orange-600 rounded-sm py-4 px-6" href="{{ asset.url() }}" target="_blank">{{ block.buttonLabel }} -></a>
             </div>
             <figure class="item {% if loop.first %}active{% endif %}">
-              {{ images.img(asset, [350, 700, 1400], 16/9) }}
+              {{ images.img(asset, [350, 700, 1400], 16/9)|attr({class: 'b-lazy'}) }}
+              <span class="hidden b-loaded"></span>
               {% if asset.caption %}
                 <figcaption class="carousel-caption hidden">
                   {{ asset.caption }}
@@ -39,5 +40,7 @@
       {% endfor %}
     </div>
     <!-- Add Pagination -->
-    <div class="swiper-pagination text-left pb-8 px-20 hidden md:block"></div>
+    <div class="swiper-pagination text-left pb-8 px-20 hidden md:block">
+      <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+    </div>
   </div>
