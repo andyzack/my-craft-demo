@@ -24,7 +24,7 @@
             <div class="absolute bottom-0 text-left px-6 pb-6 md:px-20 md:pb-24">
               <div class="text-orange-100 font-sourcecode uppercase text-sm text-shadow tracking-widest pb-4">{{ asset.caption }}</div>
               <h3 class="font-staatliches text-5xl lg:text-6xl leading-none text-orange-100 text-shadow">{{ asset.title }}</h3>
-              <a class="inline-block text-orange-100 bg-orange-600 rounded-sm py-4 px-6" href="{{ asset.url() }}" target="_blank">{{ block.buttonLabel }} -></a>
+              <a class="inline-block text-orange-100 bg-orange-600 rounded-sm py-4 px-6" href="#" target="_blank">{{ block.buttonLabel }} -></a>
             </div>
             <figure class="item {% if loop.first %}active{% endif %}">
               {{ images.img(asset, [350, 700, 1400], 16/9)|attr({class: 'b-lazy'}) }}
