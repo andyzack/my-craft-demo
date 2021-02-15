@@ -21,16 +21,12 @@
 @import 'quote';
 @import 'typography';
 @import '_plugins/swiper-carousel';
+@import '_animations/tagline';
 
 /* These styles will not be purged */
 .swiper-pagination-bullet { /* ... */ }
 
-@mixin toggle-button {
-
-}
-
 .c-toggle-button {
-  @include toggle-button;
 
   &__open {
     display: block;
@@ -54,3 +50,4 @@
   width: auto;
   padding: 1rem;
 }
+

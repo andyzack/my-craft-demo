@@ -3,5 +3,6 @@
  */
 import './styles/main.scss';
 import './scripts/swiper';
+import './scripts/tagline';
 
 import './scripts/toggle-button';

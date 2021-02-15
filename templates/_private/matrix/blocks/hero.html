@@ -12,9 +12,13 @@
     <div class="swiper-wrapper">
       {% for asset in assets %}
         <div class="swiper-slide" data-hash="{{ 'slide' ~ loop.index }}">
-          <a href="#" class="h-screen font-staatliches text-6xl sm:text-5xl lg:text-6xl leading-none text-orange-100 flex w-full items-center justify-center text-center p-8 hover:text-orange-100 relative">
+          <a href="#" class="h-screen leading-none flex w-full items-center justify-center text-center p-8 hover:text-orange-100 relative">
             {{ images.img(asset, [350, 700, 1400], 1)|attr({ class: 'b-lazy absolute top-0 bottom-0 left-0 right-0 w-full h-screen object-cover opacity-75 hover:opacity-25 transition duration-500 ease-in-out' }) }}
-            <span class="absolute z-10 pointer-events-none p-6">{{ asset.caption }}</span>
+            <span class="absolute z-10 pointer-events-none m-6">
+              <span class="absolute font-staatliches text-6xl sm:text-5xl lg:text-6xl text-gray-800 opacity-25 font-normal block">{{ asset.title }}</span>
+              <strong class="font-staatliches text-6xl sm:text-5xl lg:text-6xl text-orange-100 font-normal block">{{ asset.title }}</strong>
+              <em class="font-inter text-lg lg:text-xl text-orange-100 not-italic block">{{ asset.caption }}</em>
+            </span>
           </a>
         </div>
       {% endfor %}
