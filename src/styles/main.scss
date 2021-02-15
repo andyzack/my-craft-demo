@@ -24,3 +24,33 @@
 
 /* These styles will not be purged */
 .swiper-pagination-bullet { /* ... */ }
+
+@mixin toggle-button {
+
+}
+
+.c-toggle-button {
+  @include toggle-button;
+
+  &__open {
+    display: block;
+  }
+
+  &__close {
+    display: none;
+  }
+}
+
+.open {
+  .c-toggle-button__open {
+    display: none;
+  }
+  .c-toggle-button__close {
+    display: block;
+  }
+}
+
+.open + .c-header__left-menu {
+  width: auto;
+  padding: 1rem;
+}

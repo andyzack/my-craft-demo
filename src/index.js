@@ -3,3 +3,5 @@
  */
 import './styles/main.scss';
 import './scripts/swiper';
+
+import './scripts/toggle-button';

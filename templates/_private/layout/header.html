@@ -3,18 +3,36 @@
 #}
 
 <header class="c-header absolute left-0 right-0 z-10">
-  <nav class="container py-10 text-base md:text-xl font-inter" role="navigation" aria-label="Main">
-    <ul class="flex items-center justify-center w-full mx-auto px-10">
+  <nav class="container py-6 lg:py-10 text-base md:text-xl font-inter flex items-center justify-between relative" role="navigation" aria-label="Main">
+    <ul class="flex items-center justify-around w-full mx-auto px-2 xl:px-5">
       <li class="w-1/2">
-        <ul class="items-center justify-start hidden lg:flex">
-          <li class="mr-6">
-            <a class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#activities') }}">Activities</a>
+        <div class="lg:hidden mx-auto lg:px-10 transition duration-1000 ease-in-out">
+          <button type="button" class="text-white hover:text-white outline-none focus:outline-none c-toggle-button js-toggle-button">
+            {{ svg('@webroot/uploads/icon-menu-open.svg')|attr({ class: 'c-toggle-button__open h-8 w-8 fill-current transition duration-500 ease-in-out' }) }}
+            {{ svg('@webroot/uploads/icon-menu-close.svg')|attr({ class: 'c-toggle-button__close h-8 w-8 fill-current transition duration-500 ease-in-out' }) }}
+          </button>
+        </div>
+        <ul class="items-center justify-start block lg:flex absolute left-0 right-0 lg:relative transition duration-1000 ease-in-out overflow-hidden lg:overflow-auto w-0 mt-3 md:mt-8 lg:mt-0 lg:w-auto bg-gray-600 bg-opacity-75 lg:bg-transparent c-header__left-menu">
+          <li class="lg:ml-6 mb-1 lg-mb-0 px-3 lg:px-0 bg-gray-700 bg-opacity-75 lg:bg-transparent">
+            <a class="text-orange-100 transition duration-500 ease-in-out lg:border-b border-orange-100 border-opacity-0 py-1 my-1 block {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#activities') }}">Activities</a>
           </li>
-          <li class="mr-6">
-            <a class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#places') }}">Places</a>
+          <li class="lg:ml-6 mb-1 lg-mb-0 px-3 lg:px-0 bg-gray-700 bg-opacity-75 lg:bg-transparent">
+            <a class="text-orange-100 transition duration-500 ease-in-out lg:border-b border-orange-100 border-opacity-0 py-1 my-1 block {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#places') }}">Places</a>
           </li>
-          <li class="mr-6">
-            <a class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#packages') }}">Packages</a>
+          <li class="lg:ml-6 mb-1 lg-mb-0 px-3 lg:px-0 bg-gray-700 bg-opacity-75 lg:bg-transparent">
+            <a class="text-orange-100 transition duration-500 ease-in-out lg:border-b border-orange-100 border-opacity-0 py-1 my-1 block {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#packages') }}">Packages</a>
+          </li>
+          <li class="lg:ml-6 mb-1 lg-mb-0 px-3 lg:px-0 bg-gray-700 bg-opacity-75 lg:bg-transparent lg:hidden">
+            <a class="text-orange-100 transition duration-500 ease-in-out lg:border-b border-orange-100 border-opacity-0 py-1 my-1 block {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#about') }}">About Us</a>
+          </li>
+          <li class="lg:ml-6 mb-1 lg-mb-0 px-3 lg:px-0 bg-gray-700 bg-opacity-75 lg:bg-transparent lg:hidden">
+            <a class="text-orange-100 transition duration-500 ease-in-out lg:border-b border-orange-100 border-opacity-0 py-1 my-1 block {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#faq') }}">FAQ</a>
+          </li>
+          <li class="lg:ml-6 mb-1 lg-mb-0 px-3 lg:px-0 bg-gray-700 bg-opacity-75 lg:bg-transparent lg:hidden">
+            <a class="text-orange-100 transition duration-500 ease-in-out lg:border-b border-orange-100 border-opacity-0 py-1 my-1 block {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#blog') }}">Blog</a>
+          </li>
+          <li class="lg:ml-6 mb-1 lg-mb-0 px-3 lg:px-0 bg-gray-700 bg-opacity-75 lg:bg-transparent lg:hidden">
+            <a class="text-orange-100 transition duration-500 ease-in-out lg:border-b border-orange-100 border-opacity-0 py-1 my-1 block {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#contact') }}">Contact</a>
           </li>
         </ul>
       </li>
@@ -26,18 +44,29 @@
       </li>
       <li class="w-1/2">
         <ul class="items-center justify-end hidden lg:flex">
-          <li class="ml-6">
-            <a class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#about') }}">About Us</a>
+          <li class="lg:mr-6">
+            <a class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 py-1 my-1 inline-block {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#about') }}">About Us</a>
           </li>
-          <li class="ml-6">
-            <a class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#faq') }}">FAQ</a>
+          <li class="lg:mr-6">
+            <a class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 py-1 my-1 inline-block {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#faq') }}">FAQ</a>
           </li>
-          <li class="ml-6">
-            <a class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#blog') }}">Blog</a>
+          <li class="lg:mr-6">
+            <a class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 py-1 my-1 inline-block {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#blog') }}">Blog</a>
           </li>
-          <li class="ml-6">
-            <a class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#contact') }}">Contact</a>
+          <li class="lg:mr-6">
+            <a class="text-orange-100 transition duration-500 ease-in-out border-b border-orange-100 border-opacity-0 py-1 my-1 inline-block {{ firstSegment == '' ? 'hover:text-orange-100 hover:border-opacity-100' }}" href="{{ url('#contact') }}">Contact</a>
           </li>
+        </ul>
+        <ul class="items-center justify-end flex lg:hidden">
+          <li><a class="text-orange-100" href="{{ url('#Facebook') }}">
+            {{ svg('@webroot/uploads/icon-facebook.svg')|attr({ class: 'c-header__facebook h-5 w-auto fill-current mx-1 md:mx-2' }) }}
+          </a></li>
+          <li><a class="text-orange-100" href="{{ url('#Twitter') }}">
+            {{ svg('@webroot/uploads/icon-twitter.svg')|attr({ class: 'c-header__twitter h-5 w-auto fill-current mx-1 md:mx-2' }) }}
+          </a></li>
+          <li><a class="text-orange-100" href="{{ url('#Instagram') }}">
+            {{ svg('@webroot/uploads/icon-instagram.svg')|attr({ class: 'c-header__instagram h-5 w-auto fill-current mx-1 md:mx-2' }) }}
+          </a></li>
         </ul>
       </li>
     </ul>
